@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/black">
+
+
+        <ImageView
+            android:id="@+id/open_leftmenu"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:clickable="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="42dp"
+            android:src="@drawable/open_left_menu"
+            android:layout_marginStart="14dp"/>
+
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <cn.onegroup.mobile1603.ui.widget.MyImageView
+                android:id="@+id/bar_net"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                app:img_close="@drawable/actionbar_discover_selected"
+                app:img_open="@drawable/actionbar_discover_normal"
+                app:img_status="true"/>
+
+            <cn.onegroup.mobile1603.ui.widget.MyImageView
+                android:id="@+id/bar_music"
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:clickable="true"
+                app:img_close="@drawable/actionbar_music_selected"
+                app:img_open="@drawable/actionbar_music_normal"
+                app:img_status="false"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/bar_search"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="12dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/actionbar_search"
+            android:clickable="true"
+            android:scaleType="center"/>
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"/>
+
+</RelativeLayout>

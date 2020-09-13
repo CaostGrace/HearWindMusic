@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#F6F1F1">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/tv_recommend_hide"
+                style="@style/TextViewTypeSelect.Normal"
+                android:text="推荐"/>
+
+            <TextView
+                android:id="@+id/tv_most_new_hide"
+                style="@style/TextViewTypeSelect.Normal"
+                android:text="最新"/>
+
+            <TextView
+                android:id="@+id/tv_most_hot_hide"
+                style="@style/TextViewTypeSelect.Normal"
+                android:text="最热"/>
+
+            <TextView
+                android:id="@+id/tv_week_rank_hide"
+                style="@style/TextViewTypeSelect.Normal"
+                android:text="周排行"/>
+
+            <TextView
+                android:id="@+id/tv_month_rank_hide"
+                style="@style/TextViewTypeSelect.Normal"
+                android:text="月排行"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#B2B2B2"
+            android:layout_gravity="bottom"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/tv_recommend_show"
+                android:clickable="true"
+                style="@style/TextViewTypeSelect.Checked"
+                android:text="推荐"/>
+
+            <TextView
+                android:id="@+id/tv_most_new_show"
+                style="@style/TextViewTypeSelect.Checked"
+                android:clickable="true"
+                android:text="最新"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:clickable="true"
+                android:id="@+id/tv_most_hot_show"
+                style="@style/TextViewTypeSelect.Checked"
+                android:text="最热"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_week_rank_show"
+                android:clickable="true"
+                style="@style/TextViewTypeSelect.Checked"
+                android:text="周排行"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_month_rank_show"
+                android:clickable="true"
+                style="@style/TextViewTypeSelect.Checked"
+                android:text="月排行"
+                android:visibility="invisible"/>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

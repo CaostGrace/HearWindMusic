@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_play"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="#799bf9"
+    android:orientation="vertical">
+
+
+    <com.liulishuo.magicprogresswidget.MagicProgressBar
+        android:id="@+id/music_play_progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        app:mpb_color="@color/colorAccent"
+        app:mpb_default_color="@color/white"/>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="2dp"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:orientation="horizontal">
+
+        <cn.onegroup.mobile1603.ui.widget.RotateCircleImageView
+            android:id="@+id/playbar_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="6dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0"
+            app:circle_back_width="0dp"
+            app:image="@drawable/kkkk"
+            app:isRotate="false"
+            app:rotate_fx="0"
+            app:rotate_sd="0.5" />
+
+
+        <LinearLayout
+            android:layout_width="165dp"
+            android:layout_height="41dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="0.88"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/playbar_info"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:ellipsize="marquee"
+                android:maxLines="1"
+                android:textSize="16dp"/>
+            <TextView
+                android:id="@+id/playbar_singer"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:ellipsize="end"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:layout_marginLeft="2dp"
+                android:textSize="12dp"/>
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/play_list"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/playbar_btn_playlist"/>
+
+        <cn.onegroup.mobile1603.ui.widget.MyImageView
+            android:id="@+id/control"
+            android:layout_width="41dp"
+            android:layout_height="46dp"
+            app:img_close="@drawable/playbar_btn_play"
+            app:img_open="@drawable/playbar_btn_pause"
+            app:img_status="false"/>
+
+        <ImageView
+            android:id="@+id/play_next"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:src="@drawable/playbar_btn_next"/>
+    </LinearLayout>
+</LinearLayout>

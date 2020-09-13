@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:id="@+id/swiperefreshlayout"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:id="@+id/localmusic"
+                android:layout_height="60dp">
+
+                <ImageView
+                    android:src="@drawable/music_icn_local"
+                    android:layout_width="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:text="本地音乐"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/local_num"
+                    android:layout_gravity="center"
+                    android:text="(0)"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <View
+                android:background="#c1bec1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"></View>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:id="@+id/recent"
+                android:layout_height="60dp">
+
+                <ImageView
+                    android:src="@drawable/music_icn_recent"
+                    android:layout_width="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:text="最近播放"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/recent_num"
+                    android:layout_gravity="center"
+                    android:text="(0)"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <View
+                android:background="#c1bec1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"></View>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:id="@+id/downManger"
+                android:layout_height="60dp">
+
+                <ImageView
+                    android:src="@drawable/music_icn_dld"
+                    android:layout_width="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_height="40dp"/>
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:text="下载管理"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:text="(0)"
+                    android:id="@+id/down_num"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <View
+                android:visibility="gone"
+                android:background="#c1bec1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"></View>
+
+        </LinearLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

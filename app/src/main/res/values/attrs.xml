@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <attr name="img_status" format="boolean"></attr>
+    <attr name="img_open" format="reference"></attr>
+    <attr name="img_close" format="reference"></attr>
+
+
+    <declare-styleable name="MyImageView">
+        <attr name="img_status"></attr>
+        <attr name="img_open"></attr>
+        <attr name="img_close"></attr>
+        <attr name="android:src"></attr>
+    </declare-styleable>
+
+    <attr name="cover" format="integer"></attr>
+    <declare-styleable name="play_view">
+        <attr name="cover"/>
+    </declare-styleable>
+
+
+
+    <declare-styleable name="RotateCircleImageView">
+        <attr name="image" format="reference" />
+        <attr name="rotate_sd" format="float" />
+        <attr name="rotate_fx" format="integer" />
+        <attr name="isRotate" format="boolean" />
+        <attr name="circle_back_width" format="dimension" />
+        <attr name="circle_back_color" format="color" />
+    </declare-styleable>
+
+</resources>

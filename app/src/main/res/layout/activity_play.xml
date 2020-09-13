@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false">
+
+    <ImageView
+        android:src="@drawable/kkkk"
+        android:scaleType="fitXY"
+        android:id="@+id/song_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="6dp">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="36dp"
+                android:layout_height="26dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/linearLayout"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="12dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:src="@drawable/back"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <cn.onegroup.mobile1603.ui.widget.RotateCircleImageView
+                android:id="@+id/rotate_circle_imageView"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                app:circle_back_width="0dp"
+                app:image="@drawable/kkkk"
+                app:isRotate="false"
+                app:rotate_fx="0"
+                app:rotate_sd="0.5"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text_view_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:gravity="center"
+            android:textColor="?attr/colorAccent"
+            android:textSize="16dp"
+            tools:text="Drag me down"/>
+
+        <TextView
+            android:id="@+id/text_view_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:gravity="center"
+            android:textColor="?attr/colorAccent"
+            android:textSize="12dp"
+            tools:text="One Direction"/>
+
+        <LinearLayout
+            android:id="@+id/layout_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center_vertical"
+            android:minHeight="44dp">
+
+            <TextView
+                android:id="@+id/text_view_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="00:00"
+                android:textColor="?attr/colorAccent"
+                android:textSize="12sp"/>
+
+            <android.support.v7.widget.AppCompatSeekBar
+                android:id="@+id/seek_bar"
+                style="@style/Widget.AppCompat.SeekBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="10000"
+                tools:progress="5000"/>
+
+            <TextView
+                android:id="@+id/text_view_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="00:00"
+                android:textColor="?attr/colorAccent"
+                android:textSize="12sp"
+                tools:text="03:22"/>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="24dp"
+            android:divider="@drawable/common_divider_xlarge_horizontal"
+            android:gravity="center_vertical"
+            android:showDividers="middle">
+
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/button_play_mode_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                app:srcCompat="@drawable/ic_play_mode_shuffle"
+                tools:ignore="VectorDrawableCompat"/>
+
+
+            <LinearLayout
+                android:id="@+id/layout_play_controls"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:divider="@drawable/common_divider_xlarge_horizontal"
+                android:gravity="center_vertical"
+                android:showDividers="middle">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/button_play_last"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    app:srcCompat="@drawable/ic_play_last"/>
+
+                <cn.onegroup.mobile1603.ui.widget.MyImageView
+                    android:id="@+id/button_play_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    app:img_close="@drawable/ic_play"
+                    app:img_open="@drawable/ic_pause"
+                    app:img_status="false"
+                    app:srcCompat="@drawable/ic_play"/>
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/button_play_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    app:srcCompat="@drawable/ic_play_next"/>
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/button_favorite_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="center"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_favorite_no"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

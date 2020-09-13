@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/kkkk"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="36dp"
+            android:layout_height="26dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_alignTop="@+id/linearLayout"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/returnicon"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"/>
+
+
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout">
+
+            <TextView
+                android:id="@+id/title"
+                android:text="下载管理"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="36dp"
+            android:layout_height="26dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:textSize="16dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:text="清空"
+            android:visibility="gone"
+            android:layout_alignTop="@+id/linearLayout"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="12dp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_nav"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_height="40dp">
+
+        <TextView
+            android:id="@+id/down_s"
+            android:text="下载中"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/red"
+            android:gravity="center"
+            android:clickable="true"
+            android:background="@drawable/down_yes_shape"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:clickable="true"
+            android:id="@+id/down_ed"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="已下载"
+            android:gravity="center"
+            android:background="@drawable/down_no_shape"
+            android:textColor="@color/black"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_below="@+id/linear_nav"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/bottom_container"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+    <FrameLayout
+        android:id="@+id/bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
